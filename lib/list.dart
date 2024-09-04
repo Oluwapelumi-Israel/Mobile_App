@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 List<Map<String, dynamic>> myList = [
   {
-    "Item": "Accommodations",
+    "Item": "Accommodation",
     "Icon": const Icon(
       Icons.home,
       color: Color.fromRGBO(128, 0, 0, 1),
@@ -49,4 +49,10 @@ List<Map<String, dynamic>> myList = [
       size: 32.0,
     )
   },
+];
+
+
+
+List<Map<String, dynamic>> hostSelection = [
+
 ];
