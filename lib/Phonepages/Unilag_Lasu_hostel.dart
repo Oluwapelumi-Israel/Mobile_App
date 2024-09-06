@@ -1,4 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practice1/Phonepages/female_hostel/lasu_female_hostel.dart';
+import 'package:practice1/Phonepages/female_hostel/unilag_female_hostel.dart';
+import 'package:practice1/Phonepages/male_hostel/lasu_male_hostel.dart';
+import 'package:practice1/Phonepages/male_hostel/unilag_male_hostel.dart';
 
 class HostelSelection extends StatefulWidget {
   const HostelSelection({super.key});
@@ -96,7 +101,45 @@ class _HostelSelectionState extends State<HostelSelection> {
               isActive = 0;
             });
           }
+        } else if (isActive == 1) {
+          if (hostelName == 'MALE HOSTEL') {
+            Navigator.of(context).push(
+              CupertinoPageRoute(
+                builder: (context) {
+                  return const UnilagMaleHostel();
+                },
+              ),
+            );
+          } else {
+            Navigator.of(context).push(
+              CupertinoPageRoute(
+                builder: (context) {
+                  return const UnilagFemaleHostel();
+                },
+              ),
+            );
+          }
         }
+        else if(isActive == 2)
+          {
+            if (hostelName == 'MALE HOSTEL') {
+              Navigator.of(context).push(
+                CupertinoPageRoute(
+                  builder: (context) {
+                    return const LasuMaleHostel();
+                  },
+                ),
+              );
+            } else {
+              Navigator.of(context).push(
+                CupertinoPageRoute(
+                  builder: (context) {
+                    return const LasuFemaleHostel();
+                  },
+                ),
+              );
+            }
+          }
       },
     );
   }
